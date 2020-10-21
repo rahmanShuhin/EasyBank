@@ -1,0 +1,26 @@
+.feature {
+  &__top {
+    text-align: center;
+    @include breakpoints-up(large) {
+      text-align: left;
+      max-width: 55%;
+    }
+  }
+  &__grid {
+    text-align: center;
+    @include breakpoints-up(medium) {
+      display: flex;
+      text-align: left;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    padding: 1rem;
+    @include breakpoints-up(medium) {
+      flex: 1 0 50%;
+    }
+    @include breakpoints-up(large) {
+      flex: 1;
+    }
+  }
+}

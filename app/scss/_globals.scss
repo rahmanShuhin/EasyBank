@@ -1,0 +1,98 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.3;
+  font-size: $font-med;
+  color: $grayishBlue;
+  overflow-x: hidden;
+  font-family: "Public Sans", sans-serif;
+  @include breakpoints-up(large) {
+    font-size: $font-med;
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+button,
+.button {
+  padding: 0.875rem 2.1875rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  color: $white;
+  font-weight: 400;
+  font-size: $font-sm;
+  color: $white;
+  transition: opacity 300ms ease-in-out;
+  &:hover {
+    opacity: 0.75;
+  }
+}
+.hide-for-mobile {
+  @include breakpoints-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoints-up(large) {
+    display: none;
+  }
+}
+
+.px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.py {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+.p {
+  padding-left: 1.5rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+  padding-right: 1.5rem;
+}
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+h2 {
+  color: $darkBlue;
+  font-size: 2.3125rem;
+  line-height: 1.15;
+  font-weight: 300;
+  @include breakpoints-up(large) {
+    font-size: 2.8rem;
+  }
+}
